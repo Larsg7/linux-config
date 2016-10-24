@@ -7,4 +7,4 @@ You need:
 Optional (otherwise comment the corresponding lines out):
 * redshift, compton, feh
 
-All files got into your home directory.
+All files go into your home directory.

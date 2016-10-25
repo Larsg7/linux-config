@@ -26,7 +26,7 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 350 -fullscreen -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 bindsym $mod+ctrl+w exec rofi -show window
 bindsym $mod+ctrl+s exec rofi -show ssh
 
@@ -86,12 +86,13 @@ set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
 set $ws9 "9: "
-set $ws10 "10: "
+set $ws10 "10: "
+#"
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -119,6 +120,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # assign [class="PROGRAM"] $ws#
 assign [class="Franz"] $ws9
 assign [class="Thunderbird"] $ws9
+
 
 # assing workspaces to screens
 workspace $ws1 output DP-1
@@ -203,17 +205,17 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym Print exec screenshot
 
 # custom
-exec_always compton -b
+exec compton -f
 exec redshift
 
-exec i3-msg 'workspace $ws3; exec i3-sensitive-terminal'
-exec i3-msg 'workspace $ws4; exec i3-sensitive-terminal'
 exec i3-msg 'workspace $ws1; exec chromium'
 exec i3-msg 'workspace $ws2; exec chromium'
+
+for_window [class="Pavucontrol"] floating enable
 
 exec franz
 exec thunderbird
 # background image
-exec_always feh --bg-scale /home/lars/Pictures/WP_Shutterstock_Oasis-2560x1440_00221.jpg
+exec_always feh --bg-scale /home/lars/Pictures/wallpaper.jpg
 
-bindsym $mod+shift+x exec i3lock -c 000000
+bindsym $mod+shift+x exec i3lock -c 475263 

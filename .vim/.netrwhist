@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/var/log/nginx'
+let g:netrw_dirhist_2='/etc/X11/xorg.conf.d'
+let g:netrw_dirhist_3='/etc/systemd/system/printer.target.wants'
+let g:netrw_dirhist_4='/home/lars/.oh-my-zsh/custom/themes/powerlevel9k'
+let g:netrw_dirhist_5='/home/lars/Documents/Study/SS16/Astro'
+let g:netrw_dirhist_6='/home/lars/Drives/larsgroeber.com'

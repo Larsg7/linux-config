@@ -2,8 +2,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
+
+execute pathogen#infect()
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " -- solarized personal conf
 set background=dark
@@ -19,11 +24,19 @@ endtry
 "endif
 
 set number
-set showmatch
+" set showmatch
 set smartcase
 set pastetoggle=<F2>
-set tabstop=8 
-set softtabstop=0 
-set expandtab 
-set shiftwidth=4 
+set tabstop=8
+set softtabstop=0
+set expandtab
+set shiftwidth=4
 set smarttab
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+nnoremap j gj
+nnoremap k gk
+call pathogen#helptags()

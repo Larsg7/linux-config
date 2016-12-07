@@ -83,7 +83,8 @@ separator=false
 
 [bandwidth]
 #instance=eth0
-interval=5
+interval=2
+min_width=IN 1000K OUT 10K
 
 # CPU usage
 #
@@ -91,7 +92,7 @@ interval=5
 # see the script for details.
 [cpu_usage]
 label=
-interval=10
+interval=2
 min_width=CPU: 100.00%
 #separator=false
 

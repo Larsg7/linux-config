@@ -254,7 +254,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym Print exec screenshot
 
 # custom
-exec compton --config /home/lars/.compton.conf
+# exec compton --config /home/lars/.compton.conf
 exec redshift
 exec nm-applet
 exec dunst

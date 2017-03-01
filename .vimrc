@@ -1,27 +1,17 @@
-call plug#begin('~/.vim/plugged')
-
-Plug 'altercation/vim-colors-solarized'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'vim-airline/vim-airline'
-
-call plug#end()
+" Plugins:
+" - easymotion
+" - surround
+" - fugitive
+" - Nerdtree
+" - vim solarized
+" - ctrlp
 
 execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-" -- solarized personal conf
 set background=dark
-try
-"    let g:solarized_termcolors=256
-    colorscheme solarized
-catch
-endtry
-
-"if (exists('+colorcolumn'))
-"    set colorcolumn=80
-"    highlight ColorColumn ctermbg=9
-"endif
+colorscheme solarized
 
 set number
 " set showmatch
@@ -33,10 +23,5 @@ set expandtab
 set shiftwidth=4
 set smarttab
 
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
 nnoremap j gj
 nnoremap k gk
-call pathogen#helptags()
